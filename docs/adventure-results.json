@@ -1,0 +1,39 @@
+{
+  "method": "Instrumented positioning and health; real models, combat hits, rewards, rescue choices and cinematic callbacks",
+  "results": [
+    {
+      "mechanism": "single",
+      "solved": true,
+      "worldTimeFrozen": true
+    },
+    {
+      "boss": "boss_stone_sentinel",
+      "defeated": true,
+      "swings": 5
+    },
+    {
+      "boss": "boss_arcane_scholar",
+      "defeated": true,
+      "swings": 6
+    },
+    {
+      "boss": "boss_keeper_equations",
+      "defeated": true,
+      "swings": 7
+    },
+    {
+      "boss": "boss_eternal_archivist",
+      "defeated": true,
+      "swings": 9
+    },
+    {
+      "ending": "helped",
+      "actualStoryFlow": true
+    },
+    {
+      "ending": "left",
+      "actualStoryFlow": true
+    }
+  ],
+  "errors": []
+}

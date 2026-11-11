@@ -1,0 +1,26 @@
+{
+  "name": "three-ancient-seals-echoes-3d",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Three Ancient Seals: Echoes of the Forgotten Dungeon — Cross-Platform 3D Fantasy Action RPG with Differential Calculus",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && node scripts/build-standalone.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.187.0",
+    "playwright-core": "^1.65.0",
+    "typescript": "5.8.3",
+    "vite": "^6.4.6",
+    "vitest": "^3.2.7"
+  }
+}
+

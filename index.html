@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>The Three Ancient Seals: Echoes of the Forgotten Dungeon</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070a12'/%3E%3Cpolygon points='32,8 54,32 32,56 10,32' fill='none' stroke='%23d4af37' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%2338bdf8'/%3E%3C/svg%3E"
+    />
+    <style>
+      html,
+      body,
+      #appRoot {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #070a12;
+        color: #f8fafc;
+        font-family: Georgia, serif;
+      }
+      .loading-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+        background: #070a12;
+      }
+      .loading-overlay h2 {
+        color: #fbbf24;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+      .loading-overlay p {
+        color: #94a3b8;
+        font-family: system-ui, sans-serif;
+        font-size: 14px;
+        margin: 0;
+      }
+    </style>
+    <script>
+      if (window.location.protocol === 'file:') {
+        document.write('<link rel="stylesheet" href="./standalone/game.iife.css" />');
+        document.write('<script defer src="./standalone/game.iife.js" onerror="window.__standaloneLoadFailed=true"><\/script>');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="appRoot">
+      <div id="loadingOverlay" class="loading-overlay">
+        <h2>THE THREE ANCIENT SEALS</h2>
+        <p id="loadingStatus">Carving the Forgotten Dungeon...</p>
+      </div>
+    </div>
+    <script>
+      if (window.location.protocol === 'file:') {
+        window.addEventListener('DOMContentLoaded', function () {
+          setTimeout(function () {
+            if (!window.__GAME_APP__) {
+              var st = document.getElementById('loadingStatus');
+              if (st) {
+                st.innerHTML =
+                  'Standalone bundle not found. Run <code>npm install && npm run build</code> or launch via <code>npm run dev</code>.';
+              }
+            }
+          }, 1500);
+        });
+      }
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
